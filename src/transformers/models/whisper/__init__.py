@@ -37,6 +37,7 @@ else:
     _import_structure["modeling_whisper"] = [
         "WHISPER_PRETRAINED_MODEL_ARCHIVE_LIST",
         "WhisperForConditionalGeneration",
+        "WhisperForSequenceClassification",
         "WhisperModel",
         "WhisperPreTrainedModel",
     ]
@@ -57,6 +58,7 @@ if TYPE_CHECKING:
         from .modeling_whisper import (
             WHISPER_PRETRAINED_MODEL_ARCHIVE_LIST,
             WhisperForConditionalGeneration,
+            WhisperForSequenceClassification,
             WhisperModel,
             WhisperPreTrainedModel,
         )

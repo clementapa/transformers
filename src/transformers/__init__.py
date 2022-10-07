@@ -1874,6 +1874,7 @@ else:
         [
             "WHISPER_PRETRAINED_MODEL_ARCHIVE_LIST",
             "WhisperForConditionalGeneration",
+            "WhisperForSequenceClassification",
             "WhisperModel",
             "WhisperPreTrainedModel",
         ]
@@ -4749,6 +4750,7 @@ if TYPE_CHECKING:
         from .models.whisper import (
             WHISPER_PRETRAINED_MODEL_ARCHIVE_LIST,
             WhisperForConditionalGeneration,
+            WhisperForSequenceClassification,
             WhisperModel,
             WhisperPreTrainedModel,
         )

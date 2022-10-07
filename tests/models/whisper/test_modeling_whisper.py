@@ -40,6 +40,7 @@ if is_torch_available():
     from transformers import (
         WhisperFeatureExtractor,
         WhisperForConditionalGeneration,
+        WhisperForSequenceClassification,
         WhisperModel,
         WhisperProcessor,
         set_seed,
@@ -258,7 +259,11 @@ class WhisperModelTester:
 
 @require_torch
 class WhisperModelTest(ModelTesterMixin, GenerationTesterMixin, unittest.TestCase):
-    all_model_classes = (WhisperModel, WhisperForConditionalGeneration) if is_torch_available() else ()
+    all_model_classes = (
+        (WhisperModel, WhisperForConditionalGeneration, WhisperForSequenceClassification)
+        if is_torch_available()
+        else ()
+    )
     all_generative_model_classes = (WhisperForConditionalGeneration,) if is_torch_available() else ()
     is_encoder_decoder = True
     fx_compatible = False
